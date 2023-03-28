@@ -46,11 +46,30 @@ class NumberProcess:
     return max
            
   def minNumber(self):
-    print("c")
+    min = self.numbers[0]
+    for i in range(1, len(self.numbers)):
+      if (min > self.numbers[i]):
+        min = self.numbers[i]
+    
+    return min
         
   def measureAverage(self):
-    print("c")
+    average = 0
+    for i in range(0, len(self.numbers)):
+      average = average + self.numbers[i]
+    
+    return float(average / len(self.numbers))
         
             
-        
+  
+numberprocess = NumberProcess() #no exception /error
+numberprocess.addNum(100000) #no exception /error
+numberprocess.addNum(100001) #no exception /error
+numberprocess.addNum(10001) #no exception /error
+print('average is: ', numberprocess.measureAverage())
+print(numberprocess.search(100000))
+numberprocess.dropLastAddingNum() #no exception /error
+print('average is: ', numberprocess.measureAverage())
+print(numberprocess.maxNumber())
+print(numberprocess.minNumber())
     
