@@ -43,7 +43,7 @@ def question2answer(s):
 
   if len(s) <= 2 :
     return s[::-1] 
-    
+
   for i in range(len(result)):
     stack.append(result[i])
   

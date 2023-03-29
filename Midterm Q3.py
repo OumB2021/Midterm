@@ -16,15 +16,15 @@
 # Explanation: 9 is a 1-digit number, and 9 ==  91  = 9.
 
 def question3answer(n):
-  #converts n to array of int 
-  arr = [int(i) for i in str(n)]
-  result = 0
-  for i in range (0, len(arr)):
-    result += arr[i] ** len(arr)
-  
-  if (n == result):
-    return True
-  else:
-    return False
+  # Convert the input to an array of digits
+  digits = [int(d) for d in str(n)]
 
-print(question3answer(152))
+  # Calculate the sum of each digit raised to the power of the number of digits
+  digit_sum = 0
+  for digit in digits:
+      digit_sum += digit ** len(digits)
+
+  # Check if the input is equal to the digit sum
+  return n == digit_sum
+
+print(question3answer(153))
